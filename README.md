@@ -6,8 +6,8 @@ We conduct a series of tests to ensure that the web application is working as de
 We use Jasmine to create the following test suites against the feed reader application:
 1. `allFeeds`
 2. `The Menu`
-3. `"Initial Entries"`
-4. `"New Feed Selection"`
+3. `Initial Entries`
+4. `New Feed Selection`
 
 ## How to run this project
 
