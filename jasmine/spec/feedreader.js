@@ -72,19 +72,20 @@ $(function () {
      * clicked and does it hide when clicked again.
      */
 
-    describe('The menu', function () {
+    describe('The menu', ()=> {
         let body = document.querySelector('.menu-hidden');
         let menuLink = document.querySelector('.menu-icon-link');
         // Check if the menu element is hidden by default
         it('should be hidden by default', function () {
-            expect(body.classList.contains('menu-hidden')).toBe(true);
+            menuLink.click();
+            expect(body.classList.contains('menu-hidden')).toBe(false);
         });
 
         //Check if the menu element gets hidden or shown after an click event
 
-        it('should be show or hidden', function () {
+        it('should be shown or hidden after clicking', function () {
             menuLink.click();
-            expect(body.classList.contains('menu-hidden')).toBe(false);
+            expect(body.classList.contains('menu-hidden')).toBe(true);
         });
 
     });
@@ -118,7 +119,7 @@ $(function () {
     describe('New Feed Selection', function () {
         //Before the feeds are loaded
         const feeds = document.querySelector('.feed');
-        
+
         let myFeeds = [];
 
         beforeEach(done => {
