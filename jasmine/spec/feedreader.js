@@ -118,14 +118,16 @@ $(function () {
     describe('New Feed Selection', function () {
         //Before the feeds are loaded
         const feeds = document.querySelector('.feed');
+        
         let myFeeds = [];
+
         beforeEach(done => {
-            //The feed are loaded
             loadFeed(0);
             Array.from(feeds.children).forEach(function (el, i) {
                 myFeeds.push(el.innerText);
             });
-            loadFeed(2, done);
+            // Ensure that the feeds are loaded
+            loadFeed(1, done);
 
         });
         it('feed content changes', function () {
